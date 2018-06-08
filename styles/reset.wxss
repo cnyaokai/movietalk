@@ -1,0 +1,12 @@
+/* 修改默认样式 */
+image{
+  display: block;
+  width:100%;
+}
+video{
+  width:100%;
+}
+page{
+  line-height: 32px;
+  font-size: 32rpx;
+}
