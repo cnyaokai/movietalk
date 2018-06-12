@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    slides:null
+    slides:null,
+    entities:null
   },
 
   /**
@@ -15,7 +16,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      slides:app.globalData.slides
+      slides:app.globalData.slides,
+      entities:app.globalData.vehicles
     })
   },
 
