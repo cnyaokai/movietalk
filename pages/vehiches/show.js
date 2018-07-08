@@ -1,4 +1,6 @@
 // pages/vehiches/show.js
+const app = getApp()
+
 Page({
 
   /**

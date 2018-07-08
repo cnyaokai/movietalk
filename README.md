@@ -2,7 +2,19 @@
 typora-copy-images-to: ipic
 ---
 
-# 前11次commit的更新日志
+# 更新日志
+
+## 12th 产品详情页：页面
+
+1. 创建 pages/vehiches/ 目录，并创建 show 页面。
+
+   >为什么页面的名字叫 show ？
+   >
+   >这是一种命名风格，使用 index 命名首页，使用 show 命名单个页面。
+
+2. 在 show 页面获取小程序实例，并注册页面。
+
+3. 把 show 页面放在首页，便于调试。
 
 ## 11th 产品列表
 
