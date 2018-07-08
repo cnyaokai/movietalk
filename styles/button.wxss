@@ -5,15 +5,17 @@
   padding:0 24px;
   color: rgba(0,0,0,0.6);
   font-weight: bold;
-  border-radius: 1px;
+   border-radius: 1px; 
   font-size:32rpx;
   transition: 0.3s all;
+  /* all 表示所有属性都会获得过度效果 */
 }
 
-/* 取消按钮的边框 */
-.button::after{
-  content: none
-}
+ /* 取消按钮的边框  */
+  .button::after{  
+    content: none  
+  }  
+/* 为什么这样写就可以去掉边框？ */
 
 .button.primary{
   background: black;
