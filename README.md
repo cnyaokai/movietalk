@@ -4,7 +4,17 @@ typora-copy-images-to: ipic
 
 # 更新日志
 
-## 12th 产品详情页：页面
+## 13th 产品详情页：页面标题
+
+进入汽车的详情页，小程序页面标题需要显示汽车的名称。通过代码实现这个功能。
+
+这是一个实现功能的测试章节，我们要做以下操作：
+
+1. 先设定常量`id`让它的值是`3`
+2. 其次从全局数据里找到`id`是`3`的那条数据
+3. 最后把页面标题修改成该条数据里`header`的值
+
+## 12th 产品详情页：新建页面文件
 
 1. 创建 pages/vehiches/ 目录，并创建 show 页面。
 
@@ -22,17 +32,17 @@ typora-copy-images-to: ipic
 
 ![IMG_0335](https://ws4.sinaimg.cn/large/006tNc79ly1ft2hdce2j7j30v91vonph.jpg)
 
-幻灯片占一个屏的高度，向下翻显示产品列表，以一个个卡片的形式展现。
+幻灯片占一个屏的高度，向下翻显示**产品列表**，以一个个卡片的形式展现。
 
 大标题：
 
- * 字号：48rpx，加粗
+* 字号：48rpx，加粗
 * 字间距：2rpx
 * 底部外边距：48rpx
 
 副标题：
 
-	* 字号：32rpx 字间距3px 转大写
+* 字号：32rpx 字间距3px 转大写
 
 装饰边线：
 
@@ -65,8 +75,16 @@ typora-copy-images-to: ipic
 异步导致的问题：
 
 - 有时候小程序的页面的加载以后什么也不显示，因为页面需要的数据是从onLaunch的全局那里来的，它里面用了 wx.request 接口去请求了网络上的数据，这个请求是异步的，也就是很可能页面（wmlx+js）在加载完成以后，我们请求的数据还没回来 .. 这样页面也就没有可以显示的数据了。
-- 解决方法（案例：宁浩汽车）：
-  在onLaunch得到数据之后判断一下页面显示了没有，如果没显示就不用管了，如果显示了说明数据请求的时间太长了（来晚了），需要重新一次执行页面的数据部分，暨onLoad方法。 这个方法里用了 setData，它可以让页面重新使用得到的数据再渲染一次。
+
+  ​	
+
+解决方法（案例：宁浩汽车）：
+
+* 在onLaunch得到数据之后判断一下页面显示了没有，如果没显示就不用管了，如果显示了说明数据请求的时间太长了（来晚了），需要重新一次执行页面的数据部分，暨onLoad方法。 这个方法里用了 setData，它可以让页面重新使用得到的数据再渲染一次。
+
+* 如何判断页面显示了没有？
+
+  判断当前页面的 length。
 
 ## 9th 幻灯片的按钮样式
 
@@ -110,50 +128,55 @@ typora-copy-images-to: ipic
 
 暂不明确
 
-## 8th 设置幻灯片的样式
+## 8th 首页幻灯片—样式
 
 通过 hero.wxss 实现。
 
-给首页幻灯片单独添加hero类的原因：
+给首页幻灯片单独添加 hero.wxss 文件的原因：起到分类作用
 
-* 其他地方可能也有幻灯片，避免影响它们
-* 把这些代码抽离出来便于修改
-
-> 为什么要写在 app.wxss 中而不是写在 index.wxss 中？
+* **hero.wxss 文件里的内容，全都是以`.hero`开头的**，不会对其他效果产生干扰，且便于管理。
 
 ### 实现效果：
 
+![IMG_672AEFBF4CAE-1的副本](https://ws4.sinaimg.cn/large/006tKfTcly1ft79jb8xucj30v91vo7wh.jpg)
+
 1. 图片和视频的高度都是38.2vh
-2. 文字容器，顶部内边距10%
-3. 文字容器居中
-4. 副标题：
+2. 文字容器居中
+3. 副标题：
     * 字号32rpx；
-   * 字母转大写
-   * 字间距 3px
-   * 底部外边距 8px
-   * 颜色透明度 ：黑色，0.85
-5. 大标题：
+    * 字母转大写
+    * 字间距 3px
+    * 颜色透明度 ：黑色，0.85
+4. 大标题：
     * 字号：72rpx；
-   * 加粗
-   * 外边距 ： 上 0  下：8px  左右：12%
+    * 加粗
+    * 外边距 ： 上 0  下：8px  左右：12%
 6. 描述：
    * 内边距：上下 0  左右：12%
    * 底部外边距：32px
 
-## 7th 首页幻灯片视图
+## 7th 首页幻灯片—视图
 
 构建首页幻灯片的代码结构，有数据的地方使用模板引用。
 
+![IMG_672AEFBF4CAE-1](https://ws2.sinaimg.cn/large/006tKfTcly1ft6z0uv4qqj30v91votdm.jpg)
+
+### 实现效果：
+
+1. 显示幻灯片下面的小圆点
+2. 幻灯片独占一屏的高度
+3. 样式下一步再做
+
 注意：
 
- *  wx：for 没有写在 swiper-item 上，而是写在了 block 上。 **为什么？**
+ *  wx：for 没有写在 swiper-item 上，而是写在了 block 上。 *问：为什么？*
 *  image 的 mode 的设置 
 
 > mode='aspectfill'，保持纵横比缩放图片，图片只在水平或垂直方向是完整的，另一个方向会发生截取。
 
-## 6th 首页幻灯片的数据 
+## 6th 首页幻灯片—数据 
 
-在index.js 中提供 index.wxml 中需要的模板数据。
+在index.js 中提供 index.wxml 中需要的数据。
 
 ## 5th 设置容器样式（全局样式）
 
@@ -164,21 +187,27 @@ typora-copy-images-to: ipic
 
 ## 4th 修改默认样式
 
-写在一个单独的wxss 文件中。
+写在一个单独的 reset.wxss 文件中。*由于后面还会有很多单独的 wxss 文件，可以新建一个目录叫 styles*
 
 ### 实现效果
 
 1. 让图片和视频都以100%的宽度显示。
-2. 设置页面的字体大小为32rpx，行高为32px
+2. 把图片设置为块级元素。*问：为什么要把 image 设置成 block*
+3. 设置页面的字体大小为32rpx，行高为32px
 
 ## 3rd 获取外部数据
 
-1. 把外部数据的链接加入白名单
+1. 配置安全域名
+   * 进入 mp.weixin.qq.com/abcdefg……..    【设置】—【开发设置】—【服务器域名】—【request合法域名】—【添加 resources.ninghao.net】
+   * 退出并重新进入小程序开发工具
+   * 查看【设置】—【项目设置】—【域名信息】是否配置成功
 2. 在小程序完成初始化时，通过（ ）方法获取链接中的数据，并通过（ ）方法把获取到的数据复制到全局数据。
+3. 外部数据地址  https://resources.ninghao.net/wxapp-case/db.json
+4. `Object.assign`    *问：o小写会报错，为什么O要大写？*
 
-## 2nd 页面结构 + 数据库设计
+## 2nd 页面结构 + 后端服务（数据库）
 
-### 实现效果
+### 前端：添加必要的小程序文件，并实现以下效果
 
 1. 顶部导航栏
    * 字样：宁浩汽车
@@ -188,10 +217,38 @@ typora-copy-images-to: ipic
    * 边框：白色
    * 背景颜色：#ededed
    * tab文字被选中的颜色：黑
-   * tab分为首页和故事
+   * tab分为 首页、故事 2个
+
+### 后端服务
+
+小程序里需要用到一些数据，这些数据来自后端服务。这个后端服务你要单独去创建。
+
+> 在正常的项目中，这些数据来自我们通过WordPress、Drupal 或者 Node.js 创建的后端服务的 REST 接口，不过我们先我们先不考虑后端服务，专注小程序本身，先使用一个现成的接口。
+>
+> 拓展学习：创建 REST 接口
+
+后端服务接口： [db.json](https://resources.ninghao.net/wxapp-case/db.json)  小程序用到的东西存放在这里面。
+
+为了方便查看，我们把数据文件[下载](resources.ninghao.net/wxapp-case/wxapp-case-files.zip)到本地保存一份（db.js 和 db.json，文件后缀不同，内容一样，js 比 json 多了一行 `export default {}`），保存在 /assets 目录下。
+
+*问：为什么要存两个版本？db.js 的作用是什么？*
+
+### 准备 icons
+
+[下载地址](resources.ninghao.net/wxapp-case/wxapp-case-files.zip)
 
 ## 1st 初始化
 
-添加 readme 文件、忽略列表
+新建项目目录，添加 readme 文件、忽略列表（小程序编辑器的配置文件要在git中同步）。
 
-小程序编辑器的配置文件也要同步
+配置 git。
+
+| 步骤 | 操作                                                         | 说明                                             |
+| ---- | ------------------------------------------------------------ | ------------------------------------------------ |
+| 1    | 进入到项目所在的目录,`git init`                              | 初始化本地的仓库                                 |
+| 2    | `touch README.md`                                            | 更新日志写这                                     |
+| 3    | `curl -O https://raw.githubusercontent.com/ninghao/nest/master/.gitignore` | 下载gitignore列表                                |
+| 4    | `git add .`                                                  | 添加所有修改                                     |
+| 5    | `git commit -m 'init'`                                       | 提交git                                          |
+| 6    | `git remote add origin https://github.com/cnyaokai/movietalk.git` | 给项目添加远程仓库，名叫origin                   |
+| 7    | `git push -u origin master`                                  | 将本地master分支推送到origin远程仓库的master分支 |

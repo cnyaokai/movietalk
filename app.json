@@ -3,6 +3,7 @@
     "pages/vehiches/show",
     "pages/index/index",
     "pages/stories/stories"
+    
   ],
   "window": {
     "navigationBarTitleText": "宁浩汽车",
