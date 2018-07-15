@@ -58,3 +58,11 @@ bower_components/
 # Project #
 app/database/
 .env
+
+# webstorm #
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/ninghaoqiche.iml
+
