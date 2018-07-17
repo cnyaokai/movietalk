@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93dbaf30-4af6-4a20-89eb-42b892506edc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/vehiches/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vehiches/show.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/vehiches/show.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vehiches/show.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/vehiches/show.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vehiches/show.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/spec.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/spec.wxss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,22 +24,38 @@
       <file leaf-file-name="show.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/vehiches/show.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+            <state relative-caret-position="516">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="n#view#0;n#view#1;n#view#0;n#!!top" />
+                <element signature="n#view#1;n#view#1;n#view#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spec.wxss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="spec.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/spec.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+            <state relative-caret-position="465">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/action.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,13 +63,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/pages/vehiches/show.wxml" />
         <option value="$PROJECT_DIR$/pages/vehiches/show.js" />
         <option value="$PROJECT_DIR$/pages/vehiches/show.wxss" />
         <option value="$PROJECT_DIR$/pages/vehiches/show.json" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/pages/vehiches/show.wxml" />
         <option value="$PROJECT_DIR$/styles/spec.wxss" />
+        <option value="$PROJECT_DIR$/styles/action.css" />
+        <option value="$PROJECT_DIR$/app.wxss" />
       </list>
     </option>
   </component>
@@ -111,6 +128,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
@@ -145,12 +163,12 @@
       <workItem from="1531739647077" duration="437000" />
       <workItem from="1531740152041" duration="11000" />
       <workItem from="1531740218900" duration="8000" />
-      <workItem from="1531816551811" duration="2404000" />
+      <workItem from="1531816551811" duration="3291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4699000" />
+    <option name="totallyTimeSpent" value="5586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
@@ -186,6 +204,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="n#view#0;n#view#1;n#view#0;n#!!top" />
+            <element signature="n#view#1;n#view#1;n#view#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -260,13 +282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/vehiches/show.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -291,19 +306,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/vehiches/show.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
+        <state relative-caret-position="516">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="n#view#0;n#view#1;n#view#0;n#!!top" />
+            <element signature="n#view#1;n#view#1;n#view#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/spec.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="465">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/action.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
