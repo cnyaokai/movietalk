@@ -1,4 +1,5 @@
 <view class='section'>
+<!-- 封面 -->
   <view class='cover'>
     <image src='{{entity.image}}' mode='aspectFill'/>
     <view class='content'>
@@ -9,4 +10,26 @@
       <view class='meta'>{{entity.meta.price}}</view>
     </view>
   </view>
+
+<!-- 参数 -->
+  <view class='spec'>
+
+    <view class='item'>
+      <view class='header'>二氧化碳排放</view>
+      <view class='value'>
+        <text>{{entity.meta.carbon_dioxide}}</text>
+        克／公里
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='header'>综合燃油</view>
+      <view class='value'>
+        <text>{{entity.meta.fuel}}</text>
+        升／百公里
+      </view>
+    </view>
+
+  </view>
+  
 </view>

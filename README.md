@@ -4,6 +4,16 @@ typora-copy-images-to: ipic
 
 # 更新日志
 
+## 15th 产品详情页：参数的视图与样式
+
+字号：24rpx；
+
+底部边线和item右侧边线：1px #ededed；
+
+总内边距：64rpx；数字的右边距：8rpx；数字的字号：60rpx
+
+
+
 ## 14th 产品详情页：封面的视图与样式
 
 ![IMG_91B84C0ACD01-1](https://ws2.sinaimg.cn/large/006tKfTcly1ftafaxlpgrj30v91eu1kx.jpg)

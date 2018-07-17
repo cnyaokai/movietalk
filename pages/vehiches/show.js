@@ -16,7 +16,7 @@ Page({
   onLoad: function () {
     const id = 3;
     const entity = app.globalData.vehicles.filter(
-      (item) => item.id == id 
+      (item) => { return item.id == id }
     );
     this.setData({
       entity:entity[0]
@@ -31,7 +31,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -75,4 +75,4 @@ Page({
   onShareAppMessage: function () {
   
   }
-})
+});
