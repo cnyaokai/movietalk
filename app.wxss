@@ -4,7 +4,8 @@
 @import 'styles/card.wxss';
 @import 'styles/cover.wxss';
 @import 'styles/spec.wxss';
-@import "styles/action.css";
+@import 'styles/action.wxss';
+@import 'styles/story.wxss';
 
 page{
   background:#f8f8f8;

@@ -1,41 +1,70 @@
-<view class='section'>
-<!-- 封面 -->
-  <view class='cover'>
-    <image src='{{entity.image}}' mode='aspectFill'/>
-    <view class='content'>
-      <view class='header'>
-        {{entity.header}}
-        <view class='sub_header'>{{entity.sub_header}}</view>
+<!--<view class='section'>-->
+<!--&lt;!&ndash; 封面 &ndash;&gt;-->
+  <!--<view class='cover'>-->
+    <!--<image src='{{entity.image}}' mode='aspectFill'/>-->
+    <!--<view class='content'>-->
+      <!--<view class='header'>-->
+        <!--{{entity.header}}-->
+        <!--<view class='sub_header'>{{entity.sub_header}}</view>-->
+      <!--</view>-->
+      <!--<view class='meta'>{{entity.meta.price}}</view>-->
+    <!--</view>-->
+  <!--</view>-->
+
+<!--&lt;!&ndash; 参数 &ndash;&gt;-->
+  <!--<view class='spec'>-->
+
+    <!--<view class='item'>-->
+      <!--<view class='header'>二氧化碳排放</view>-->
+      <!--<view class='value'>-->
+        <!--<text>{{entity.meta.carbon_dioxide}}</text>-->
+        <!--克／公里-->
+      <!--</view>-->
+    <!--</view>-->
+
+    <!--<view class='item'>-->
+      <!--<view class='header'>综合燃油</view>-->
+      <!--<view class='value'>-->
+        <!--<text>{{entity.meta.fuel}}</text>-->
+        <!--升／百公里-->
+      <!--</view>-->
+    <!--</view>-->
+
+  <!--</view>-->
+
+  <!--&lt;!&ndash;预约动作&ndash;&gt;-->
+  <!--<view class="action">-->
+    <!--<view class="description">{{entity.description}}</view>-->
+    <!--<button class="button primary">预约试驾</button>-->
+  <!--</view>-->
+
+<!--</view>-->
+
+<!--外观和内饰-->
+<!--外观-->
+<!--在外观的类上加white便于区分-->
+<swiper class="section story white" indicator-dots="{{true}}">
+  <block wx:for="{{entity.meta.exterior_design}}" wx:key="id">
+    <swiper-item>
+      <view class="content">
+        <view class="sub_header">外观</view>
+        <view class="header">{{item.header}}</view>
+        <view class="description">{{item.description}}</view>
       </view>
-      <view class='meta'>{{entity.meta.price}}</view>
+      <image src="{{item.image}}" mode="aspectFill"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!--内饰-->
+<swiper class="section story" indicator-dots="{{true}}">
+<block wx:for="{{entity.meta.interior_design}}" wx:key="id">
+  <swiper-item>
+    <view class="content">
+      <view class="sub_header">内饰</view>
+      <view class="header">{{item.header}}</view>
+      <view class="description">{{item.description}}</view>
     </view>
-  </view>
-
-<!-- 参数 -->
-  <view class='spec'>
-
-    <view class='item'>
-      <view class='header'>二氧化碳排放</view>
-      <view class='value'>
-        <text>{{entity.meta.carbon_dioxide}}</text>
-        克／公里
-      </view>
-    </view>
-
-    <view class='item'>
-      <view class='header'>综合燃油</view>
-      <view class='value'>
-        <text>{{entity.meta.fuel}}</text>
-        升／百公里
-      </view>
-    </view>
-
-  </view>
-
-  <!--预约动作-->
-  <view class="action">
-    <view class="description">{{entity.description}}</view>
-    <button class="button primary">预约试驾</button>
-  </view>
-
-</view>
+    <image src="{{item.image}}" mode="aspectFill"/>
+  </swiper-item>
+</block>
+</swiper>
