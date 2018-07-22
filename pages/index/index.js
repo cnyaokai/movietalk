@@ -10,7 +10,18 @@ Page({
     slides:null,
     entities:null
   },
-
+  /** 
+   * 事件处理方法都有 event 参数，表示事件
+   * wx.navigateTo 可以在不关闭当前页面的前提下打开新页面
+   */
+  readMore(event){
+    
+    wx.navigateTo(
+      {
+        url:`/pages/vehiches/show?id=${event.target.dataset.id}`
+      }
+    )
+  },
   /**
    * 生命周期函数--监听页面加载
    */

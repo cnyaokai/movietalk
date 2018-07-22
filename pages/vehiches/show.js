@@ -13,10 +13,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    const id = 3;
+  onLoad: function (options) {
+    // console.log(options);
+    const id = options.id;
     const entity = app.globalData.vehicles.filter(
-      (item) => { return item.id == id }
+      (item) =>  item.id == id
     );
     this.setData({
       entity:entity[0]
@@ -24,7 +25,6 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.entity.header
     })
-
   },
 
   /**

@@ -9,22 +9,27 @@
         <view class='description'>{{item.description}}</view>
         <view class='action'>
           <button class='button'>预约试驾</button>
-          <button class='button primary'>了解更多</button>
+          <button class='button primary' bindtap='readMore' 
+          data-id='{{item.id}}'>了解更多</button>
         </view>
       </view>
     </swiper-item>
   </block>
 </swiper>
+
 <view class='cards'>
+  <!--navigator 组件要放进card里面-->
     <view class='card' hover-class='hover' wx:for='{{ entities }}' wx:key='id'>
-      <image src='{{item.image}}' mode='aspectFill' />
-      <view class='content'>
-        <view class='header'>
-          {{item.header}}
-          <view class='sub-header'>{{item.sub_header}}</view>
+      <navigator url='/pages/vehiches/show?id={{item.id}}' hover-class="none">
+        <image src='{{item.image}}' mode='aspectFill' />
+        <view class='content'>
+          <view class='header'>
+            {{item.header}}
+            <view class='sub-header'>{{item.sub_header}}</view>
+          </view>
+          <view class='description'>{{item.description}}</view>
+          <view class='meta'>{{item.meta.price}}</view>
         </view>
-        <view class='description'>{{item.description}}</view>
-        <view class='meta'>{{item.meta.price}}</view>
-      </view>
+      </navigator>
     </view>
 </view>
