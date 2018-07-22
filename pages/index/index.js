@@ -1,4 +1,5 @@
 // pages/index/index.js
+import testDrive from '../../modules/testDrive.js';
 const app = getApp();
 
 Page({
@@ -10,6 +11,14 @@ Page({
     slides:null,
     entities:null
   },
+  /** 把这段代码做成模块
+  testDrive(){
+    wx.showToast({
+      title: '暂不支持',
+    })
+  },
+  */
+  testDrive,
   /** 
    * 事件处理方法都有 event 参数，表示事件
    * wx.navigateTo 可以在不关闭当前页面的前提下打开新页面

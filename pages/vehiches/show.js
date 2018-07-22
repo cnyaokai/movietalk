@@ -1,4 +1,5 @@
 // pages/vehiches/show.js
+import testDrive from '../../modules/testDrive.js';
 const app = getApp();
 
 Page({
@@ -26,7 +27,7 @@ Page({
       title: this.data.entity.header
     })
   },
-
+  testDrive,
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
